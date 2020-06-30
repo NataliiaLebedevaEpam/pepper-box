@@ -15,7 +15,9 @@ import org.apache.log.Logger;
 import java.util.List;
 
 /**
- * The SerializedConfigElement custom jmeter config element. This class acts as serialized object feeder to jmeter java sampler, it includes serialized load generator which takes input class and its property expressions and generates messages.
+ * The SerializedConfigElement custom jmeter config element.
+ * This class acts as serialized object feeder to jmeter java sampler,
+ * it includes serialized load generator which takes input class and its property expressions and generates messages.
  *
  * @Author Satish Bhor<satish.bhor@gslab.com>, Nachiket Kate <nachiket.kate@gslab.com>
  * @Version 1.0

@@ -93,6 +93,34 @@ public class TestInputUtils {
         return fieldExpressionMappings;
     }
 
+    public static List<FieldExpressionMapping> getKafkaMessageMappings() {
+        List<FieldExpressionMapping> fieldExpressionMappings = new ArrayList<>();
+        FieldExpressionMapping fieldExpressionMapping = new FieldExpressionMapping();
+        fieldExpressionMapping.setFieldName("document");
+        fieldExpressionMapping.setFieldExpression("\"Test Message\"");
+
+        Assert.assertNotNull(fieldExpressionMapping.getFieldName());
+        Assert.assertNotNull(fieldExpressionMapping.getFieldExpression());
+
+        FieldExpressionMapping fieldExpressionMapping1 = new FieldExpressionMapping();
+        fieldExpressionMapping1.setFieldName("job_id");
+        fieldExpressionMapping1.setFieldExpression("UUID()");
+
+        FieldExpressionMapping fieldExpressionMapping2 = new FieldExpressionMapping();
+        fieldExpressionMapping2.setFieldName("batch_id");
+        fieldExpressionMapping2.setFieldExpression("UUID()");
+
+        FieldExpressionMapping fieldExpressionMapping3 = new FieldExpressionMapping();
+        fieldExpressionMapping3.setFieldName("unique_key");
+        fieldExpressionMapping3.setFieldExpression("UUID()");
+
+        fieldExpressionMappings.add(fieldExpressionMapping);
+        fieldExpressionMappings.add(fieldExpressionMapping1);
+        fieldExpressionMappings.add(fieldExpressionMapping2);
+        fieldExpressionMappings.add(fieldExpressionMapping3);
+        return fieldExpressionMappings;
+    }
+
     public static List<FieldExpressionMapping> getWrongFieldExpressionMappings() {
         List<FieldExpressionMapping> fieldExpressionMappings = new ArrayList<>();
         FieldExpressionMapping fieldExpressionMapping = new FieldExpressionMapping();
